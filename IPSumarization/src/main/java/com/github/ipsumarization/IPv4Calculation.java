@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.zizegaitero.ipsumarization;
+package com.github.ipsumarization;
 
 import inet.ipaddr.IPAddress;
 import inet.ipaddr.IPAddressString;
-import com.github.zizegaitero.ipsumarization.core.IPV4;
+import com.github.ipsumarization.core.IPV4;
 import java.util.ArrayList;
 import java.util.List;
 

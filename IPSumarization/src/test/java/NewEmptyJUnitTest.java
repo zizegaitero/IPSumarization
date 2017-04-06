@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-import com.github.zizegaitero.ipsumarization.IPv4Calculation;
-import com.github.zizegaitero.ipsumarization.IPv6Calculation;
+import com.github.ipsumarization.IPv4Calculation;
+import com.github.ipsumarization.IPv6Calculation;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.zizegaitero.ipsumarization;
+package com.github.ipsumarization;
 
 import inet.ipaddr.IPAddressString;
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.zizegaitero.ipsumarization.core;
+package com.github.ipsumarization.core;
 
 import inet.ipaddr.IPAddressString;
 import static java.lang.Integer.toBinaryString;
