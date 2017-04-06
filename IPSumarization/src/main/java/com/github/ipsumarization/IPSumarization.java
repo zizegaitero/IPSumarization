@@ -61,7 +61,7 @@ public class IPSumarization {
      * @return 
      */
     private static String getSumarizedRoute (IPAddressString ipString){
-        StringBuilder result = new StringBuilder("The ip is: "+ipString.getAddress().toCanonicalString()).append(System.getProperty("line.separator"));
+        StringBuilder result = new StringBuilder("The ip is: ").append(ipString.getAddress().toCanonicalString()).append(System.getProperty("line.separator"));
         if(ipString.getIPVersion().isIPv4()){
             result.append("The subnet mask is: ").append(ipString.getAddress().getNetwork().getNetworkMask(ipString.getNetworkPrefixLength(), false)).append(System.getProperty("line.separator"));
         }else{
