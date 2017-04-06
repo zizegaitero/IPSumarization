@@ -82,7 +82,7 @@ public class IPSumarization {
         for (String arg : ips) {
             ipad = new IPAddressString(arg);
             if (!ipad.isValid()){
-                System.out.println("Este parâmetro não é um endereço IP "+ arg);
+                System.out.println("Este parâmetro não é um endereço IP: "+ arg+System.getProperty("line.separator")+" try --h for help ");
                 System.exit(1);
             }            
         }  
