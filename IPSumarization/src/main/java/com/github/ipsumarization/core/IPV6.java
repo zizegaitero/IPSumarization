@@ -11,11 +11,8 @@ import inet.ipaddr.IPAddressString;
  *
  * @author jean
  */
-public class IPV6 {
+public class IPV6 extends IP {
     
-    private String IP;
-    private String IPComplete;
-    private Integer prefixo;
     private final String quart1;
     private final String quart2;
     private final String quart3;
@@ -24,15 +21,6 @@ public class IPV6 {
     private final String quart6;
     private final String quart7;
     private final String quart8;
-
-
-    public String getIPComplete() {
-        return IPComplete;
-    }
-
-    public void setIPComplete(String IPComplete) {
-        this.IPComplete = IPComplete;
-    }
 
     public IPV6(String IPComplete) {
         this.IPComplete = IPComplete;
@@ -52,22 +40,7 @@ public class IPV6 {
     }   
     
     
-    public String getIP() {
-        return IP;
-    }
-
-    public void setIP(String IP) {
-        this.IP = IP;
-    }
-
-    public Integer getPrefixo() {
-        return prefixo;
-    }
-
-    public void setPrefixo(Integer prefixo) {
-        this.prefixo = prefixo;
-    }   
-    
+    @Override
     public String getBinaryIP(){
         return quart1+quart2+quart3+quart4+quart5+quart6+quart7+quart8;
     }    

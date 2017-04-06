@@ -27,6 +27,7 @@ public class IPSumarization {
             System.exit(0);
         }
         List<String> asList = Arrays.asList(args);
+        validaIps(asList);
         boolean ipv4 = true;
         for (String arg : args) {
             if(arg.contains(":")){
@@ -43,6 +44,10 @@ public class IPSumarization {
         System.exit(0);
     }
     
+    /**
+     * retorna a String com a ajuda
+     * @return 
+     */
     private static String help(){
         String help = "This software calculate the route sumarized both ip version "+System.getProperty("line.separator")
                 + "   params:  <IP/prefix>...N<IP/prefix> "+System.getProperty("line.separator")
@@ -50,6 +55,11 @@ public class IPSumarization {
         return help;
     }
     
+    /**
+     * Retorna a String com os dados da rota sumrizada
+     * @param ipString
+     * @return 
+     */
     private static String getSumarizedRoute (IPAddressString ipString){
         StringBuilder result = new StringBuilder("The ip is: "+ipString.getAddress().toCanonicalString()).append(System.getProperty("line.separator"));
         if(ipString.getIPVersion().isIPv4()){
@@ -60,6 +70,22 @@ public class IPSumarization {
             result.append("The other format is: ").append(ipString.getAddress().toCompressedString()).append(System.getProperty("line.separator"));
         }
         return result.toString();
+    }
+    
+    /**
+     * Valida se os paraêmtros de entrada são ips.
+     * Se não forem mostra o log de erro e fecha a aplicação
+     * @param ips 
+     */
+    private static void validaIps(List<String> ips) {
+        IPAddressString ipad;
+        for (String arg : ips) {
+            ipad = new IPAddressString(arg);
+            if (!ipad.isValid()){
+                System.out.println("Este parâmetro não é um endereço IP "+ arg);
+                System.exit(1);
+            }            
+        }  
     }
     
 }

@@ -6,30 +6,18 @@
 package com.github.ipsumarization.core;
 
 import inet.ipaddr.IPAddressString;
-import static java.lang.Integer.toBinaryString;
 
 /**
  *
  * @author jean
  */
-public class IPV4 {
+public class IPV4 extends IP {
     
-    private String IP;
-    private String IPComplete;
     private String mascara;
-    private Integer prefixo;
     private String octeto1;
     private String octeto2;
     private String octeto3;
     private String octeto4;
-
-    public String getIPComplete() {
-        return IPComplete;
-    }
-
-    public void setIPComplete(String IPComplete) {
-        this.IPComplete = IPComplete;
-    }
 
     public IPV4(String IPComplete) {
         this.IPComplete = IPComplete;
@@ -45,29 +33,12 @@ public class IPV4 {
         this.octeto4 = String.format("%8s", Integer.toBinaryString(Integer.parseInt(splitIPOc[3]))).replace(' ', '0');
     }   
     
-    
-    public String getIP() {
-        return IP;
-    }
-
-    public void setIP(String IP) {
-        this.IP = IP;
-    }
-
     public String getMascara() {
         return mascara;
     }
 
     public void setMascara(String mascara) {
         this.mascara = mascara;
-    }
-
-    public Integer getPrefixo() {
-        return prefixo;
-    }
-
-    public void setPrefixo(Integer prefixo) {
-        this.prefixo = prefixo;
     }
 
     public String getOcteto1() {
@@ -102,10 +73,7 @@ public class IPV4 {
         this.octeto4 = octeto4;
     }
     
-    private void ajustaOctetos(String mascara){
-        
-    }
-    
+    @Override
     public String getBinaryIP(){
         return octeto1+octeto2+octeto3+octeto4;
     }    
